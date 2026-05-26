@@ -1,0 +1,44 @@
+---
+title: 'Product updates'
+description: 'Subscribe to release notes and documentation changes'
+icon: 'rss'
+rss: true
+---
+
+Use this page to publish product announcements, release notes, and documentation changes.
+
+The RSS feed for this page is available at `/updates/rss.xml` on your published docs site.
+
+<Update
+  label="2026-05-26"
+  description="Docs feed"
+  tags={["Docs", "RSS"]}
+>
+  Added an RSS-enabled updates page so readers can subscribe to release notes from their feed reader, Slack, or email automation.
+</Update>
+
+<Update
+  label="2026-05-20"
+  description="Component examples"
+  tags={["Components"]}
+  rss={{
+    title: "Component examples added",
+    description: "New examples show how to use Mintlify cards, steps, tabs, and callouts in documentation pages."
+  }}
+>
+  ## Component examples added
+
+  <Card title="Explore components" icon="puzzle-piece" href="/essentials/components">
+    See examples for cards, steps, tabs, accordions, frames, and code groups.
+  </Card>
+
+  These examples help you build richer pages without leaving MDX.
+</Update>
+
+<Update
+  label="2026-05-13"
+  description="Agent-ready docs"
+  tags={["AI"]}
+>
+  Published guidance for making docs easier for AI coding tools to read, reference, and reuse.
+</Update>
