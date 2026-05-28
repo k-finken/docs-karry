@@ -5,6 +5,7 @@ icon: 'eye'
 ---
 
 import { FeatureCallout } from '/snippets/feature-callout.mdx';
+import SnippetIntro from '/snippets/snippet-intro.mdx';
 
 The `Visibility` component lets a single page serve two audiences: humans reading on the web and AI agents processing the Markdown output. Content marked `for="humans"` appears on the rendered page but is excluded from Markdown exports. Content marked `for="agents"` is hidden on the web but included in Markdown.
 
@@ -62,6 +63,15 @@ hidden from human readers but included in the Markdown that AI agents fetch.
   Append `.md` to this page's URL to confirm: the human-only callout (and its
   imported snippet definition) is gone, and the agents-only text is included.
 </Note>
+
+## Snippet outside Visibility
+
+The snippet below is rendered in normal page content — not inside any
+`Visibility` block. It should appear on both the rendered page and the `.md`
+export. Only its `import` line is stripped from the Markdown; the snippet usage
+itself stays.
+
+<SnippetIntro />
 
 ## Props
 
