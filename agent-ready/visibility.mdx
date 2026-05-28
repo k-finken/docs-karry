@@ -4,6 +4,8 @@ description: 'Show different content to humans and AI agents'
 icon: 'eye'
 ---
 
+import { FeatureCallout } from '/snippets/feature-callout.mdx';
+
 The `Visibility` component lets a single page serve two audiences: humans reading on the web and AI agents processing the Markdown output. Content marked `for="humans"` appears on the rendered page but is excluded from Markdown exports. Content marked `for="agents"` is hidden on the web but included in Markdown.
 
 This means you can write conversational, UI-centric instructions for humans and structured, machine-readable instructions for AI — without maintaining two separate pages.
@@ -40,6 +42,26 @@ Mintlify serves every page at two URLs:
 ```
 
 Human readers see the step-by-step UI walkthrough. AI agents processing the Markdown get the direct API instructions instead.
+
+## Live example
+
+The callout below is an imported component snippet rendered inside a
+`for="humans"` block. It appears here on the rendered page, but is stripped from
+this page's `.md` export. The `for="agents"` block beneath it does the opposite.
+
+<Visibility for="humans">
+  <FeatureCallout name="the Visibility component" />
+</Visibility>
+
+<Visibility for="agents">
+The Visibility component renders audience-specific content. This sentence is
+hidden from human readers but included in the Markdown that AI agents fetch.
+</Visibility>
+
+<Note>
+  Append `.md` to this page's URL to confirm: the human-only callout (and its
+  imported snippet definition) is gone, and the agents-only text is included.
+</Note>
 
 ## Props
 
